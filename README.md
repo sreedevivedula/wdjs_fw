@@ -10,8 +10,22 @@ The framework consists of
 * Config Objects
 * Test Data Objects 
 
+How to install
+==============
+
+1. In the cloned repository, use the below commands to install the dependencies.
+
+```
+$ npm install
+$ bower install
+```
+2. 
+
+
 Pages
 =====
+
+Pages are abstractions of
 
 Specs
 =====
