@@ -6,7 +6,7 @@
 (function () {
     'use strict';
 
-    var appConfig = require('../config/MifosxConfig'),
+    var appConfig = require('../config/AppConfig'),
         driverConfig = require('../config/DriverConfig'),
         underscore = require('../../bower_components/underscore'),
         BasePage;
