@@ -21,8 +21,12 @@
 
         // Page Services
         go : function () {
-            driver.get(this.appConfig.baseURL);
+             driver.get(this.appConfig.baseURL);
         },
+        close : function () {
+             driver.close(this.appConfig.baseURL);
+        },
+
 
         waitForLoad: function () {
             loginpage.waitForElement(by.id("uid"));

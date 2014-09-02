@@ -9,13 +9,12 @@
         driver,
         driverConfig;
 
-    server = new SeleniumServer("/Users/sreedevi/Downloads/" +
-            "selenium-server-standalone-2.42.2.jar",
-        {port: 4444});
-    server.start();
+//    server = new SeleniumServer("/Users/sreedevi/Downloads/" +
+//            "selenium-server-standalone-2.42.2.jar",
+//        {port: 4444});
+//    server.start();
 
     driver = new webdriver.Builder().
-        usingServer(server.address()).
         withCapabilities(webdriver.Capabilities.chrome()).
         build();
 
