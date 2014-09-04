@@ -9,15 +9,15 @@ var expect = require('chai').use(require('chai-as-promised')).expect,
 var loginpage = require("../../spec/pages/LoginPage.js");
 
 var myHooks = function () {
-    this.Before(function (callback) {
+    this.Before("@hook1",function (callback) {
         flow.execute(function(){
-            loginpage.go();
+           loginpage.go();
             callback();
         });
 
     });
 
-    this.After(function (callback) {
+    this.After("@hook1",function (callback) {
         flow.execute(function(){
             loginpage.close();
             callback();
