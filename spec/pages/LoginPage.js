@@ -16,6 +16,7 @@
 
         // Page Elements
         get invalidLoginError() {
+            this.waitForElement(driver.findElement(by.css("label.error")))
             return driver.findElement(by.css("label.error"));
         },
 

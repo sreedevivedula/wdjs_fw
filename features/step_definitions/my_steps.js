@@ -3,7 +3,8 @@ var expect = require('chai').use(require('chai-as-promised')).expect,
  homepage = require("../../spec/pages/HomePage.js"),
  webdriver = require("selenium-webdriver"),
  flow = webdriver.promise.controlFlow();
- var myStepDefinitionsWrapper = function () {
+
+var myStepDefinitionsWrapper = function () {
     this.Given(/^I m on login page$/, function (callback) {
 
         flow.execute(function(){
@@ -29,9 +30,26 @@ var expect = require('chai').use(require('chai-as-promised')).expect,
     });
 
     this.When(/^I enter login credentials as "([^"]*)" and "([^"]*)"$/, function (arg1, arg2, callback) {
-        console.log(arg1)
-        console.log(arg2)
-        callback();
+        flow.execute(function(){
+            loginpage.validLogin(arg1,arg2);
+            callback();
+        });
+    });
+
+
+    this.Then(/^I should see Invalid Login Error$/, function (callback) {
+        flow.execute(function(){
+            expect(loginpage.invalidLoginError.isDisplayed()).to.
+                eventually.equal(true);
+            callback();
+        });
+    });
+
+    this.When(/^I enter Invalid credentials as "([^"]*)" and "([^"]*)"$/, function (arg1, arg2, callback) {
+        flow.execute(function(){
+            loginpage.invalidLogin(arg1,arg2);
+            callback();
+        });
     });
 };
 

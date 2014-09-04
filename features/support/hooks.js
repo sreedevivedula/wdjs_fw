@@ -7,6 +7,7 @@ var expect = require('chai').use(require('chai-as-promised')).expect,
     webdriver = require("selenium-webdriver"),
     flow = webdriver.promise.controlFlow();
 var loginpage = require("../../spec/pages/LoginPage.js");
+
 var myHooks = function () {
     this.Before(function (callback) {
         flow.execute(function(){
