@@ -30,7 +30,7 @@ test.describe("MIFOSX Login Page", function() {
     test.afterEach("Logout", function() {
         homepage.isDisplayed().then(function(result) {
             if (result) {
-                homepage.navbar.userdropdown.logout() ;
+                homepage.navbar.userDropDown.logout() ;
             }
         });
     });

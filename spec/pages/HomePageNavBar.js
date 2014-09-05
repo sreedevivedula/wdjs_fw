@@ -13,7 +13,7 @@
     homepagenavbar = homepagenavbar.extend({
 
         // Page Elements
-        userdropdown: {
+        userDropDown: {
 
             open: function () {
                 driver.findElement(by.id("user-dropdown")).click();

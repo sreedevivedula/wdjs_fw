@@ -27,7 +27,7 @@ describe("MIFOSX Login Page", function() {
     afterEach(function() {
         homepage.isDisplayed().then(function(result) {
             if (result) {
-                homepage.navbar.userdropdown.logout() ;
+                homepage.navbar.userDropDown.logout() ;
             }
         });
     });
