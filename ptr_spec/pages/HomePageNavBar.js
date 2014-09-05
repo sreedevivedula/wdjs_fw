@@ -13,7 +13,8 @@
     homepagenavbar = homepagenavbar.extend({
 
         // Page Elements
-        userdropdown: {
+
+        userDropDown: {
 
             open: function () {
                 element(by.id("user-dropdown")).click();
@@ -22,6 +23,13 @@
             logout: function () {
                 this.open();
                 element(by.id("logout")).click();
+            }
+        },
+
+        clientsDropDown: {
+
+            open: function() {
+                element(by.binding("label.anchor.clients")).click();
             }
         }
 
