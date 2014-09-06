@@ -21,12 +21,8 @@
 
     driver.manage().window().maximize();
 
-    driverConfig = {
-
-        driver: driver,
-        by: webdriver.By
-
-    };
+    global.driver = driver;
+    global.by = webdriver.By;
 
     module.exports = driverConfig;
 

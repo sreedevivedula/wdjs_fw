@@ -12,9 +12,6 @@
         BasePage;
 
     BasePage = function () {
-        global.driver = driverConfig.driver;
-        global.by = driverConfig.by;
-
         this.appConfig = appConfig;
     };
 
